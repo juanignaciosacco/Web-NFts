@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contacto NFTs</title>
+</head>
+
+<body id="pagContacto">
+
+    <!-- Comienza header -->
+    <header>
+        <!-- Barra navegacion - Inicio -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="Logo/logo.png" width="40px" height="40px" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="roadmap.html">Roadmap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="colecciones.html">Colecciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobreNosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Barra navegacion - Fin -->
+    </header>
+    <!-- Finaliza header -->
+
+    <!-- Comienza cuerpo de pagina -->
+    <main id="contacto" class="container-fluid">
+        <!-- Fila de contacto directo y formulario de contacto -->
+        <div class="row align-items-center">
+            <!-- Columna contacto directo -->
+            <section id="infoContacto" class="col-6 text-center">
+                <h1>Contacto</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ex error ab. Optio dolorum amet
+                laborum nostrum velit ipsum fugit deserunt enim doloremque, hic ea eveniet nisi harum? Odit, beatae.
+                </p>
+                <img src="Imagenes/Iconos/telegram.png" class="iconosContacto" height="30" width="30" alt="Icono Telegram by Riajulislam"><a href="canal_telegram">Canal de telegram</a>
+                <br>
+                <img src="Imagenes/Iconos/gmail.png" class="iconosContacto" height="30" width="30" alt="Icono Email by Freepik"><a href="mailto:aaa@gmail.com">aaa@gmail.com</a>
+            </section>
+            <!-- Columna formulario de contacto -->
+            <section id="formularioContacto" class="col-6 mt-5 text-center">
+                <form action="enviar.php" method="post" enctype="text/plain">
+                    <fieldset>
+                        <legend>Contacto</legend>
+                        <label for="nombre">Nombre</label>
+                        <br>
+                        <input type="text" name="nombre">
+                        <br>
+                        <label for="aplleido">Apellido</label>
+                        <br>
+                        <input type="text" name="apellido">
+                        <br>
+                        <label for="mail">Email</label>
+                        <br>
+                        <input type="email" name="mail" placeholder="juan@mail.com">
+                        <br>
+                        <label for="asunto" class="mt-3">Asunto</label>
+                        <select name="asunto">
+                            <option value="Soporte tecnico">Soporte tecnico</option>
+                            <option value="Informacion">Informacion</option>
+                            <option value="Contacto">Contacto</option>
+                        </select>
+                        <br>
+                        <label for="genero" class="mt-3">Genero</label>
+                        <br>
+                        <input type="radio" value="Masculino" name="genero" class="me-1">Masculino
+                        <input type="radio" value="Femenino" name="genero" class="me-1">Femenino
+                        <input type="radio" value="No especificar" name="genero" class="me-1">No especificar
+                        <br>
+                        <label class="mt-3">Por cual coleccion te contactas:</label>
+                        <br>
+                        <label for="">Coleccion 1</label>
+                        <input type="checkbox">
+                        <label for="">Coleccion 2</label>
+                        <input type="checkbox">
+                        <label for="">Coleccion 3</label>
+                        <input type="checkbox">
+                        <br>
+                        <input type="submit" class="btn btn-info mt-3" value="Enviar">
+                        <input type="reset" class="btn btn-info mt-3" value="Resetear">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </main>
+    <!-- Finaliza cuerpo de pagina -->
+
+    <!-- Comienza footer -->
+    <footer class="container-fluid mt-5 pt-4 pb-4 text-center bg-dark posicionPie">
+        <section>
+            <input id="mailSuscripcion" type="email" name="mail" placeholder="Email for subscription">
+            <input id="submit" type="submit" class="btn btn-info" value="submit">
+        </section>
+        <br>
+        <section id="iconosFooter">
+            <img src="Imagenes/Iconos/twitter.png" width="30" height="30" alt="Icono Twitter by Dave Gandy">
+            <img src="Imagenes/Iconos/facebook.png" width="30" height="30" alt="Icono Facebook by Freepik">
+            <img src="Imagenes/Iconos/instagram.png" width="30" height="30" alt="Icono Instragram by Freepik">
+        </section>
+        <section id="menuFooter">
+            <br>
+            <a href="colecciones.html">Colecciones</a>
+            <br>
+            <a href="https://sitio_web_marketplace.com">Marketplace</a>
+            <p>... copyright 2022 ©</p>
+            <br>
+            <a href="politicasDePrivacidad.html">Politicas de privacidad</a>
+        </section>
+    </footer>
+    <!-- Finaliza footer -->
+
+    <!-- Scripts de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

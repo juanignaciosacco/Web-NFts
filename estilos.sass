@@ -1,0 +1,454 @@
+// Variables
+$color1: turquoise
+$color2: rgb(42, 150, 139)
+
+
+#pagInicio,  #pagRoadmap,  #pagColecciones,  #pagSobreNosotros, #pagContacto
+    background-image: url(Imagenes/Fondos/galaxia3.jpg)
+    background-repeat: no-repeat
+    background-color: #fff
+    background-size: cover
+    color: #fff
+
+
+h1
+    color: $color1
+
+
+h2
+    color: $color2
+
+
+label
+    color: $color2
+
+
+legend
+    color: $color1
+
+
+main
+    min-height: calc(100vh - 310px)
+
+
+a
+    color: $color1
+
+
+#mailSuscripcion
+    padding: 0.4rem
+    vertical-align: middle
+
+
+/* Pagina Inicio */
+
+table tr td
+    color: #fff
+    transition: all 0.8s
+
+
+/* Pagina Roadmap */
+
+.item
+    transition: all 0.8s
+
+
+.item
+    &:hover
+        background-color: rgba(255, 255, 255, 0.311)
+        border-radius: 10px
+
+
+.item1
+    margin: auto
+    width: 300px
+    border-top: 5px dashed turquoise
+    border-left: 5px dashed turquoise
+    border-top-left-radius: 8px
+    border-top-right-radius: 8px
+    border-bottom-left-radius: 8px
+    list-style: none
+
+
+.item1
+    &:first-child
+        margin: auto
+        width: 300px
+        border-top: 0
+        border-left: 5px dashed turquoise
+
+
+.item2
+    margin: auto
+    width: 300px
+    border-top: 5px dashed turquoise
+    border-right: 5px dashed turquoise
+    border-top-left-radius: 8px
+    border-top-right-radius: 8px
+    border-bottom-right-radius: 8px
+    list-style: none
+
+
+/* Pagina sobre nosotros */
+
+.txtSobreNos
+    &::first-letter
+        color: grey
+        font-size: 35px
+
+// Pagina colecciones
+.vAlign
+    filter: sepia(100%)
+    transition: all 0.8s
+    &:hover
+        filter: sepia(0%)
+
+
+// Inicio media queries
+@media only screen and (max-width: 575px)
+
+    table
+        width: 100%
+        height: 150px
+    
+
+    .imgTabla
+        width: 70px
+    
+
+    .videoInicio
+        width: 100% 
+        height: 225px
+    
+
+    /* Inicio diseño pagina Colecciones */
+    /* Tamaño imagenes */
+    .vAlign
+        height: 80px
+    
+    /* Fin diseña pagina colecciones */
+
+    /* Inicio pagina Sobre nosoros */
+    .imgMiembros
+        height: 170px
+        width: 250px
+    
+
+    .tablaMiembros
+        display: grid
+        grid-template-columns: 1
+        row-gap: 20px
+    
+
+    .captionMiembros
+        grid-column: 1/2
+        grid-row: 1/2
+    
+
+    .imgMiembros1
+        grid-column: 1/2
+        grid-row: 2/3
+    
+    .imgMiembros2
+        grid-column: 1/2
+        grid-row: 4/5
+    
+    .imgMiembros3
+        grid-column: 1/2
+        grid-row: 6/7
+    
+    .imgMiembros4
+        grid-column: 1/2
+        grid-row: 8/9
+    
+
+    .txtMiembros1
+        grid-column: 1/2
+        grid-row: 3/4
+    
+    .txtMiembros2
+        grid-column: 1/2
+        grid-row: 5/6
+    
+    .txtMiembros3
+        grid-column: 1/2
+        grid-row: 7/8
+    
+    .txtMiembros4
+        grid-column: 1/2
+        grid-row: 9/10
+    
+    /* fin pagina sobre nosotros */
+
+@media only screen and (min-width: 576px) and (max-width: 767px)
+
+    .imgTabla
+        width: 120px
+    
+
+    .videoInicio
+        width: 80% 
+        height: 300px
+    
+
+    /* Inicio pagina colecciones */
+    /* Tamaño imagenes */
+    .vAlign
+        width: 120px
+    
+    /* Fin pagina colecciones */
+
+    /* Inicio pagina Sobre nosoros */
+    .imgMiembros
+        height: 170px
+        width: 250px
+    
+    .tablaMiembros
+        display: grid
+        grid-template-columns: 2
+        row-gap: 20px
+    
+    .captionMiembros
+        grid-column: 1/3
+        grid-row: 1/2
+    
+
+    .imgMiembros1
+        grid-column: 1/2
+        grid-row: 2/3
+    
+    .imgMiembros2
+        grid-column: 2/3
+        grid-row: 2/3
+    
+    .imgMiembros3
+        grid-column: 1/2
+        grid-row: 4/5
+    
+    .imgMiembros4
+        grid-column: 2/3
+        grid-row: 4/5
+    
+
+    .txtMiembros1
+        grid-column: 1/2
+        grid-row: 3/4
+    
+    .txtMiembros2
+        grid-column: 2/3
+        grid-row: 3/4
+    
+    .txtMiembros3
+        grid-column: 1/2
+        grid-row: 5/6
+    
+    .txtMiembros4
+        grid-column: 2/3
+        grid-row: 5/6
+    
+    /* Fin pagina sobre nosotros */
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+
+    .imgTabla
+        width: 120px
+    
+
+    .videoInicio
+        width: 80% 
+        height: 300px
+    
+
+    /* Inicio pagina colecciones */
+    /* Tamaño imagenes */
+    .vAlign
+        width: 170px
+    
+    /* Fin pagina colecciones */
+
+    /* Inicio pagina Sobre nosoros */
+    .imgMiembros
+        height: 170px
+        width: 250px
+    
+    .tablaMiembros
+        display: grid
+        grid-template-columns: 2
+        row-gap: 20px
+    
+    .captionMiembros
+        grid-column: 1/3
+        grid-row: 1/2
+    
+
+    .imgMiembros1
+        grid-column: 1/2
+        grid-row: 2/3
+    
+    .imgMiembros2
+        grid-column: 2/3
+        grid-row: 2/3
+    
+    .imgMiembros3
+        grid-column: 1/2
+        grid-row: 4/5
+    
+    .imgMiembros4
+        grid-column: 2/3
+        grid-row: 4/5
+    
+
+    .txtMiembros1
+        grid-column: 1/2
+        grid-row: 3/4
+    
+    .txtMiembros2
+        grid-column: 2/3
+        grid-row: 3/4
+    
+    .txtMiembros3
+        grid-column: 1/2
+        grid-row: 5/6
+    
+    .txtMiembros4
+        grid-column: 2/3
+        grid-row: 5/6
+    
+    /* Fin pagina sobre nosotros */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+
+    .imgTabla
+        width: 180px
+    
+
+    .videoInicio
+        width: 700px
+        height: 400px
+    
+
+    /* Inicio pagina colecciones */
+    .vAlign
+        width: 190px
+    
+    /* Fin pagina colecciones */
+
+    /* Inicio pagina Sobre nosoros */
+    .imgMiembros
+        height: 170px
+        width: 250px
+    
+    .tablaMiembros
+        display: grid
+        grid-template-columns: 2
+        row-gap: 20px
+    
+    .captionMiembros
+        grid-column: 1/3
+        grid-row: 1/2
+    
+
+    .imgMiembros1
+        grid-column: 1/2
+        grid-row: 2/3
+    
+    .imgMiembros2
+        grid-column: 2/3
+        grid-row: 2/3
+    
+    .imgMiembros3
+        grid-column: 1/2
+        grid-row: 4/5
+    
+    .imgMiembros4
+        grid-column: 2/3
+        grid-row: 4/5
+    
+
+    .txtMiembros1
+        grid-column: 1/2
+        grid-row: 3/4
+    
+    .txtMiembros2
+        grid-column: 2/3
+        grid-row: 3/4
+    
+    .txtMiembros3
+        grid-column: 1/2
+        grid-row: 5/6
+    
+    .txtMiembros4
+        grid-column: 2/3
+        grid-row: 5/6
+    
+    /* Fin pagina sobre nosotros */
+
+@media only screen and (min-width: 1200px)
+    .imgTabla
+        width: 180px
+    
+
+    .videoInicio
+        width: 700px
+        height: 400px
+    
+
+    /* Inicio pagina colecciones */
+    /* Tamaño imagenes */
+    .vAlign
+        width: 280px
+    
+    /* Fin pagina colecciones */
+
+    /* Inicio pagina Sobre nosoros */
+
+    .imgMiembros
+        height: 190px
+        width: 270px
+    
+    .tablaMiembros
+        display: grid
+        grid-template-columns: 4
+        column-gap: 20px
+        row-gap: 40px
+    
+    .captionMiembros
+        grid-column: 1/5
+        grid-row: 1/2
+    
+
+    .imgMiembros1
+        grid-column: 1/2
+        grid-row: 2/3
+    
+    .imgMiembros2
+        grid-column: 2/3
+        grid-row: 2/3
+    
+    .imgMiembros3
+        grid-column: 3/4
+        grid-row: 2/3
+    
+    .imgMiembros4
+        grid-column: 4/5
+        grid-row: 2/3
+    
+
+    .txtMiembros1
+        grid-column: 1/2
+        grid-row: 3/4
+    
+    .txtMiembros2
+        grid-column: 2/3
+        grid-row: 3/4
+    
+    .txtMiembros3
+        grid-column: 3/4
+        grid-row: 3/4
+    
+    .txtMiembros4
+        grid-column: 4/5
+        grid-row: 3/4
+    
+    /* Fin pagina sobre nosotros */
+// FIn media queries
