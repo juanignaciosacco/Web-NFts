@@ -43,42 +43,38 @@ table tr td {
 }
 
 /* Pagina Roadmap */
-.item {
-  transition: all 0.8s;
-}
-
-.item:hover {
-  background-color: rgba(255, 255, 255, 0.311);
-  border-radius: 10px;
-}
-
-.item1 {
-  margin: auto;
-  width: 300px;
-  border-top: 5px dashed turquoise;
-  border-left: 5px dashed turquoise;
+.item, .item--2, .item--1 {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   list-style: none;
+  transition: all 0.8s;
 }
 
-.item1:first-child {
+.item:hover, .item--2:hover, .item--1:hover {
+  background-color: rgba(255, 255, 255, 0.311);
+  border-radius: 10px;
+}
+
+.item--1 {
+  margin: auto;
+  width: 300px;
+  border-top: 5px dashed turquoise;
+  border-left: 5px dashed turquoise;
+}
+
+.item--1:first-child {
   margin: auto;
   width: 300px;
   border-top: 0;
   border-left: 5px dashed turquoise;
 }
 
-.item2 {
+.item--2 {
   margin: auto;
   width: 300px;
   border-top: 5px dashed turquoise;
   border-right: 5px dashed turquoise;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  list-style: none;
 }
 
 /* Pagina sobre nosotros */
@@ -88,11 +84,28 @@ table tr td {
 }
 
 .vAlign {
-  filter: sepia(100%);
   transition: all 0.8s;
 }
-.vAlign:hover {
+
+.coleccion1 {
+  filter: sepia(100%);
+}
+.coleccion1:hover {
   filter: sepia(0%);
+}
+
+.coleccion2 {
+  filter: grayscale(100%);
+}
+.coleccion2:hover {
+  filter: grayscale(0%);
+}
+
+.coleccion3 {
+  filter: blur(6px);
+}
+.coleccion3:hover {
+  filter: blur(0px);
 }
 
 @media only screen and (max-width: 575px) {

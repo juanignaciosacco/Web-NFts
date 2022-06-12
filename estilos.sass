@@ -10,35 +10,27 @@ $color2: rgb(42, 150, 139)
     background-size: cover
     color: #fff
 
-
 h1
     color: $color1
-
 
 h2
     color: $color2
 
-
 label
     color: $color2
-
 
 legend
     color: $color1
 
-
 main
     min-height: calc(100vh - 310px)
-
 
 a
     color: $color1
 
-
 #mailSuscripcion
     padding: 0.4rem
     vertical-align: middle
-
 
 /* Pagina Inicio */
 
@@ -46,63 +38,71 @@ table tr td
     color: #fff
     transition: all 0.8s
 
-
 /* Pagina Roadmap */
 
-.item
-    transition: all 0.8s
+// Creo mixin para el ancho y el margin de los item
+@mixin posicionAncho($posicion, $ancho)
+    margin: $posicion
+    width: $ancho
 
+.item
+    border-top-left-radius: 8px
+    border-top-right-radius: 8px
+    border-bottom-left-radius: 8px
+    list-style: none
+    transition: all 0.8s
 
 .item
     &:hover
         background-color: rgba(255, 255, 255, 0.311)
         border-radius: 10px
 
-
-.item1
-    margin: auto
-    width: 300px
+// Utilizo extend de clase item y le modifico el lugar de los bordes
+.item--1
+    @extend .item
+    @include posicionAncho(auto, 300px)
     border-top: 5px dashed turquoise
     border-left: 5px dashed turquoise
-    border-top-left-radius: 8px
-    border-top-right-radius: 8px
-    border-bottom-left-radius: 8px
-    list-style: none
 
-
-.item1
+.item--1
     &:first-child
-        margin: auto
-        width: 300px
+        @include posicionAncho(auto, 300px)
         border-top: 0
         border-left: 5px dashed turquoise
 
-
-.item2
-    margin: auto
-    width: 300px
+.item--2
+    @extend .item
+    @include posicionAncho(auto, 300px)
     border-top: 5px dashed turquoise
     border-right: 5px dashed turquoise
-    border-top-left-radius: 8px
-    border-top-right-radius: 8px
-    border-bottom-right-radius: 8px
-    list-style: none
 
+// Fin pagina roadmap
 
 /* Pagina sobre nosotros */
-
 .txtSobreNos
     &::first-letter
         color: grey
         font-size: 35px
+// Fin pagina sobre nosotrso
 
 // Pagina colecciones
 .vAlign
-    filter: sepia(100%)
     transition: all 0.8s
-    &:hover
-        filter: sepia(0%)
 
+// Creo map para los diferentes efectos de las colecciones y luego un each para asignarle los efectos n el que incluyo un hover con sentencia if para volverlo a su color natural segun el efecto asignado
+$colecciones: (1: sepia(100%),2: grayscale(100%),3: blur(6px))
+
+@each $coleccion, $filtro in $colecciones 
+    .coleccion#{$coleccion}
+        filter: $filtro
+        &:hover
+            @if ($filtro == sepia(100%))
+                filter: sepia(0%)
+            @else if ($filtro == grayscale(100%))
+                filter: grayscale(0%)
+            @else if ($filtro == blur(6px))
+                filter: blur(0px)
+// Fin pagina colecciones
 
 // Inicio media queries
 @media only screen and (max-width: 575px)
