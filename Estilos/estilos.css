@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #pagInicio, #pagRoadmap, #pagColecciones, #pagSobreNosotros, #pagContacto {
-  background-image: url(Imagenes/Fondos/galaxia3.jpg);
+  background-image: url(../Imagenes/Fondos/galaxia3.jpg);
   background-repeat: no-repeat;
   background-color: #fff;
   background-size: cover;
